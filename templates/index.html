@@ -6,7 +6,37 @@
 {% include "nav.html" %}
 {% endblock nav %}
 
-
+{% block title %}
+Welcome {{user}}
+    {% endblock title %}
 {% block body %}
-      <h1>Welcom to Home Page</h1>
+<div class="container">
+      <div class="card" style="margin-top: 30px;">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 55px;" align="center">Welcome {{user}}</h5>
+              
+            </div>
+      </div>
+
+      <div class="btn_cont" style="align-items: center; margin: 50px; justify-content: center;" align="center">
+            <div class="btn" style="padding: 15px;
+            background-color: rgb(39, 89, 182); margin: 50px; color: white; ">
+                  <a href="{% url 'choicepage' %}" style="text-decoration: none; color: white;">Take Attendance</a>
+            </div>
+            <div class="btn" style="padding: 15px;
+            background-color: rgb(39, 89, 182); margin: 50px; color: white; ">
+                  <a href="{% url 'SR' %}" style="text-decoration: none; color: white;">Fetch Student</a>
+            </div>
+            <!-- <div class="btn" style="padding: 15px;
+            background-color: rgb(39, 89, 182); margin: 50px; color: white; ">
+                  <a href="{% url 'Add' %}" style="text-decoration: none; color: white;">Add Student</a>
+            </div> -->
+            <div class="btn" style="padding: 15px;
+            background-color: rgb(39, 89, 182); margin: 50px; color: white; ">
+                  <a href="{% url 'StudentList' %}" style="text-decoration: none; color: white;">All Students</a>
+            </div>
+      </div>
+      
+</div>
+      
 {% endblock body %}
